@@ -28,13 +28,13 @@
     Below is a minimal `blocks.h` that only has this block in it with an interval
     of 600 seconds and a signal of RTMIN+12 associated with it.
 
-    ```c
+      ```c
       static const Block blocks[] = {
         {"", "wbar -f DMX -x 133 -y 37", 600, 12},
       };
 
       static char delim = '|';
-    ```  
+      ```
 
   2. **i3status**:  
 
