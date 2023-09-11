@@ -38,19 +38,19 @@
 
   2. **i3status**:  
 
-    ```sh
+      ```sh
       bar {
       status_command i3status | /path/to/w3bar
       }
-    ```  
+      ```
 
   3. **i3blocks**:  
 
-    ```sh
+      ```sh
       [weather]
       command=/path/to/w3bar
       interval=600
-    ```
+      ```
 
 #### Getting Weather
 
