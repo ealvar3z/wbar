@@ -60,7 +60,8 @@
    ```console
      curl ipinfo.io | grep 'loc'
      # -> "loc": "133.37, 37.133",
-     curl -X GET "https://api.weather.gov/points/133.37,37.133" | grep -iE '(gridid|grid[xy])'
+     curl -X GET "https://api.weather.gov/points/133.37,37.133" |\
+     grep -iE '(gridid|grid[xy])'
      # -> "gridId": "DMX",
      #    "gridX": 42,
      #    "gridY": 69,
