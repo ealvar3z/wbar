@@ -24,26 +24,26 @@
   The intended usage is inside of `i3status`, `i3blocks`, or
   `dwmblocks` to put weather in your status bar. 
 
-  1. `dwm`:
+  1. `dwm`:  
     Below is a minimal `blocks.h` that only has this block in it with an interval
     of 600 seconds and a signal of RTMIN+12 associated with it.
 
     ``` C
       static const Block blocks[] = {
-        {"", "weatherbar -f DMX -x 133 -y 37", 600, 12},
+        {"", "wbar -f DMX -x 133 -y 37", 600, 12},
       };
 
       static char delim = '|';
     ```  
 
-  2. `i3status`:
+  2. `i3status`:  
     ``` shell
       bar {
       status_command i3status | /path/to/w3bar
       }
     ```  
 
-  3. `i3blocks`:
+  3. `i3blocks`:  
     ``` shell
       [weather]
       command=/path/to/w3bar
@@ -68,5 +68,5 @@
   `-x`, and `-y` flags:
 
   ``` shell
-    weatherbar -office DMX -x 42 -y 69
+    wbar -office DMX -x 42 -y 69
   ```
