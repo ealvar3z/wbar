@@ -24,7 +24,7 @@
   The intended usage is inside of `i3status`, `i3blocks`, or
   `dwmblocks` to put weather in your status bar. 
 
-  1. `dwm`:  
+  1. **dwm**:  
     Below is a minimal `blocks.h` that only has this block in it with an interval
     of 600 seconds and a signal of RTMIN+12 associated with it.
 
@@ -36,15 +36,17 @@
       static char delim = '|';
     ```  
 
-  2. `i3status`:  
-    ``` shell
+  2. **i3status**:  
+
+    ``` sh
       bar {
       status_command i3status | /path/to/w3bar
       }
     ```  
 
-  3. `i3blocks`:  
-    ``` shell
+  3. **i3blocks**:  
+
+    ``` sh
       [weather]
       command=/path/to/w3bar
       interval=600
@@ -55,7 +57,7 @@
    First, find the latitude and longitude for your location. Use these
    with the following command to get your grid x and y coordinates.
 
-   ``` shell
+   ``` console
      curl ipinfo.io | grep 'loc'
      # -> "loc": "133.37, 37.133",
      curl -X GET "https://api.weather.gov/points/133.37,37.133" | grep -iE '(gridid|grid[xy])'
@@ -67,6 +69,6 @@
   Then you can set these in your program invocation using the `office`,
   `-x`, and `-y` flags:
 
-  ``` shell
+  ``` console
     wbar -office DMX -x 42 -y 69
   ```
