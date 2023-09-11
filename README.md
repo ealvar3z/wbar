@@ -4,7 +4,7 @@
 
   `wbar`: simple go utility for fetching and formatting weather information.
   Built for a status bar, and it fetches its data from
-  [[https://weather.gov][weather.gov]].
+  [weather.gov](https://weather.gov).
 
 #### Installation
 
