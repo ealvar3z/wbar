@@ -1,10 +1,12 @@
+// Copyright 2022 e. alvarez
+// SPDX-License-Identifier: BSD-3-Clause
 package main
 
 import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 )
@@ -28,8 +30,8 @@ type Location struct {
 type Office struct {
 	Properties struct {
 		GridId string `json:"gridId"`
-		GridX int `json:"gridX"`
-		GridY int `json:"gridY"`
+		GridX  int    `json:"gridX"`
+		GridY  int    `json:"gridY"`
 	} `json:"properties"`
 }
 
@@ -40,7 +42,7 @@ func fetchJSON(url string, target interface{}) error {
 	}
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return err
 	}
@@ -109,4 +111,3 @@ func main() {
 	fmt.Printf("H %d°F L %d°F | ⛅ %d°F %s %s\n",
 		high, low, now.Temperature, now.WindDirection, now.WindSpeed)
 }
-
